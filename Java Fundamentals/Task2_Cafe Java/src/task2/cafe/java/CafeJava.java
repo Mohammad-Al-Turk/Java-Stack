@@ -1,3 +1,5 @@
+package task2.cafe.java;
+
 public class CafeJava {
     public static void main(String[] args) {
         // APP VARIABLES
