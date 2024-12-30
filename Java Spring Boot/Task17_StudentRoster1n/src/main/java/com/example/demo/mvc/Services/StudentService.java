@@ -29,7 +29,17 @@ public class StudentService {
 		return studentRepo.findById(id);
 	}
 	
-	
+	////////////////////////////
+
+	public void removeStudentFromDorm(Long studentId) {
+    Optional<Student> optionalStudent = studentRepo.findById(studentId);
+    if (optionalStudent.isPresent()) {
+        Student student = optionalStudent.get();
+        student.setDorm(null);   
+        studentRepo.save(student); 
+    }
+}
+
 	
 	
 }

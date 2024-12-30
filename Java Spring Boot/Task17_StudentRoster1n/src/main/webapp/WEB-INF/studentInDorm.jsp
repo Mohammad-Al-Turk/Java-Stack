@@ -21,7 +21,9 @@
 <c:forEach var="temp" items="${data.students}">
 <tr>
 <td>${temp.name}</td>
-<td><a href="/dorms/${temp.id}">Remove</a></td>
+<td>
+                <a href="/dorms/${data.id}/students/${temp.id}/remove">Remove</a>
+            </td>
 </tr>
 </c:forEach>
 </table>

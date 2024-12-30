@@ -88,5 +88,14 @@ public class MainController {
 		
 	}
 	
+////////////////////////////////////////
+
+@GetMapping("/dorms/{dormId}/students/{studentId}/remove")
+public String removeStudentFromDorm(@PathVariable("dormId") Long dormId, @PathVariable("studentId") Long studentId) {
+    studentService.removeStudentFromDorm(studentId);
+    return "redirect:/dorms/" + dormId;
+}
+
+	
 	
 }
